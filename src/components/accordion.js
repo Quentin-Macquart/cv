@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './accordion.css';
 
-function Accordion({ title, image, content, content2 }) {
+function Accordion({ title, content, content2 }) {
   const [active, setActive] = useState(false);
 
   const handleToggle = (e) => {
@@ -17,8 +17,6 @@ function Accordion({ title, image, content, content2 }) {
           <span className='accordionIcon'> </span>
           <span className='accordionIcon2'> </span>
         </div>
-
-        <img className='imgCube' alt='logo' src={image} />
 
         <div className='content' id='content'>
           {content}
