@@ -1,38 +1,420 @@
-.App {
-  text-align: center;
-}
+/*------------------------BACKGROUND COLOR ---------------------------*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    position: relative;
+    background: 
+      radial-gradient(#f1cb2fe0 3px, transparent 4px),
+      radial-gradient(#ffe476ce 3px, transparent 4px),
+      linear-gradient(white, 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #21cdb388 75px, #21cdb3a4 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #21cdb386 76px, #21cdb398 77px, transparent 78px, transparent 109px),
+    white;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   }
+
+*{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/*-----------------------------WELCOME*/
+
+.svgName{
+    margin-top: 7vh;
+}
+svg text {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 8px;
+    stroke: #21cdb4;
+    font-size: 45px;
+    font-weight: 700;
+    stroke-width: 3;
+    animation: textAnimate 3s infinite alternate;  
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(0, 0%, 100%)
+  
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: rgba(255, 255, 255, 0.548)
+    }
+}
+
+    /*-------------------------SCROLL DOWN---------------------------------------*/
+
+.myWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrollDown {
+    width: 260px;
+    animation: typing 2s, blink .5s infinite alternate;;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 20px;
+}
+      
+@keyframes typing{
+    from {
+      width: 0
+    }
+}
+          
+@keyframes blink{
+    50% {
+       border-color: transparent
+    }
+}
+
+/*-----------------------------------------------------------------------------*/
+.myHeader{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.header{
+    font-family: 'Quicksand', sans-serif;
+    width: 100vw;
+    height: 70px;
+    background-color: #21cdb4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textToChange{
+    text-decoration: none;
+    color: black;
+}
+
+.headerLogo{
+    margin-top: 2vh;
+    width: 35px;
+}
+.juniorDev{
+    font-size: 40px;
+}
+.intro{
+    font-size: 19px;
+    width: 80%;
+    color: #454940;
+    font-weight: 100;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 10%;
+}
+
+.scrollDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #fddd5a ;
+    font-family: 'Quicksand', sans-serif;
+    color: #14685b;
+    margin: 10% 0 10% 0;
+    font-weight: 600;
+}
+
+
+.download{
+    font-size: 25px;
+    text-decoration: none;
+    color: #7c2e20;
+    font-weight: bold;
+}
+
+.accordion{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloc{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.cubeTitle{
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+    position: relative;
+    cursor: pointer;
+    background-color:#fddd5a;
+    box-shadow: rgba(89, 150, 165, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all .5s ease-in;
+}
+
+.titleBloc{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#14685b;
+}
+
+.cubeTitle:hover,
+.active .cubeTitle{
+    cursor: pointer;
+    opacity: 0.9;
+    background-color:#199b87;
+}
+
+.imgCube{
+    position: absolute;
+}
+
+.bloc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content{
+    color: #14685b;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: all .1s ease-in;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.active .content{
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    padding: 1rem;
+    opacity: 1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    transition: all .4s ease-in;
+    font-weight: 500;
+}
+
+.content2{
+    color: #7c2e20;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: all .1s ease-in;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.active .content2{
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    padding: 1rem;
+    opacity: 1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    transition: all .4s ease-in;
+    font-weight: 500;
+}
+
+.date{
+color: #21cdb4;
+font-weight:600;
+line-height: 1.3rem;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+font-size: 20px;
+font-family: 'Quicksand', sans-serif;
+}
+
+.at{
+    color: #21cdb4;
+}
+
+.job{
+    font-size: 22px;
+    font-weight: 300;
+    color: #14685b;
+}
+
+.aboutMe{
+color: #14685b;
+}
+
+.where{
+    font-weight: 500;
+    color: #14685b;
+}
+
+.description{
+    color: #14685b;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.flexbox{
+    font-weight: 500;
+    color: #14685b;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
+}
+
+.onlySkill{
+    padding: 20px 0 0 0;
+    color: #14685b;
+}
+
+.projectBloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.projectBloc a {
+    text-decoration: none;
+    color: #14685b;
+}
+
+.projectDescription {
+    font-size: 20px;
+}
+
+.durationAndLevel{
+    font-size: 20px;
+    color: #21cdb4;
+}
+
+.myImgBloc{
+    height: 50px;
+    width: auto;
+}
+
+.content2{
+    height: 70px;
+    width: 85vw;
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 25px;
+    color: rgb(160, 23, 23);
+}
+/* -------------------------------------------ICON TRANSFORM-----------------------*/
+
+.accordionIcon{
+    width: 100px;
+}
+
+.accordionIcon::before {
+    opacity: 0.6;
+    position: absolute;
+    top: 80%;
+    left: 39%;
+    content: "";
+    width: 35px;
+    height: 5px;
+    background: #2fe9d0;
+    transform: rotate(50deg);
+    transition: all .5s;
+}
+
+.active .accordionIcon::before{
+    transform: rotate(-50deg);
+    background: #28c8b2;
+    opacity: 0.5;
+} 
+
+
+.accordionIcon2{
+    width: 100px;
+}
+
+.accordionIcon2::before {
+    opacity: 0.6;
+    position: absolute;
+    top: 80%;
+    right: 39%;
+    content: "";
+    width: 35px;
+    height: 5px;
+    background: #2fe9d0;
+    transform: rotate(-50deg);
+    transition: all .5s;
+}
+
+.active .accordionIcon2::before{
+    transform: rotate(50deg);
+    background: #28c8b2;
+    opacity: 0.5;
+} 
+
+
+/*-----------------------------RESPONSIVE--------------------------------*/
+
+@media screen and (min-width: 600px) {
+
+    .accordion{
+        display: flex;
+    }
+
+    .svgName{
+        margin-top: 7%;
+    }
+    .welcomeSvg{
+        width: 100vw;
+    }
+
+    svg text {
+        width: 100%;
+        font-family: 'Quicksand', sans-serif;
+        letter-spacing: 0;
+        stroke: #21cdb4;
+        font-size: 70px;
+        font-weight: 700;
+        animation: textAnimate 5s infinite alternate;  
+    }
+
+    .intro{
+        margin-bottom: 10%;
+    }
+    .aboutMe{
+        width: 40%;
+    }
+    .scrollDown{
+        margin: 0 0 8% 0;
+    }
+    .aboutMe{
+        width: 40px;
+    }
 }

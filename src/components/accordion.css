@@ -1,0 +1,46 @@
+.cubeTitle{
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.cubeTitle:before {
+  content: "";
+  position: absolute;
+  height: 75px;
+  width: 350px;
+  background : rgb(253, 253, 253);
+  left: 25px;
+  top: 0;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.cubeTitle:hover:before {
+  top: 80%;
+  left: -40%;
+}
+
+@media screen and (max-width: 560px) {
+
+  .cubeTitle:before {
+    content: "";
+    position: absolute;
+    height: 75px;
+    width: 350px;
+    background : rgb(253, 253, 253);
+    left: 25px;
+    top: 0;
+    transform: rotate(37deg);
+    transition: all .3s;
+    opacity: 0.4;
+    overflow: hidden;
+  }
+
+  .active
+  .cubeTitle::before{
+    top: 80%;
+    left: -40%;
+  }
+}
