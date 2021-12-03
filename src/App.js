@@ -76,11 +76,6 @@ function App() {
             content={<ResumeStudies />}
             content2=''
           />
-
-          <p className='years' className='content'>
-            {' '}
-            4 years of Studying{' '}
-          </p>
         </section>
 
         {/* -----------------------------------------------------KONW--------------------------*/}

@@ -18,7 +18,7 @@ function Accordion({ title, image, content, content2 }) {
           <span className='accordionIcon2'> </span>
         </div>
 
-        <img className='imgCube' src={image} />
+        <img className='imgCube' alt='logo' src={image} />
 
         <div className='content' id='content'>
           {content}
